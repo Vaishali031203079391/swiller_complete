@@ -1,0 +1,18 @@
+<div class="ms-email-container">
+    <div class="ms-qa-options">
+        <a routerLink="/" class="btn btn-primary w-100 mt-0 has-icon"> <i class="flaticon-pencil"></i> Compose Email </a>
+    </div>
+    <perfect-scrollbar class="ms-scrollable ms-quickbar-container">
+        <li class="p-3  media ms-email clearfix" *ngFor="let item of email">
+            <div class="ms-email-img mr-3 ">
+                <img src="{{item.img}}" class="ms-img-round" alt="{{item.name}}">
+            </div>
+            <div class="media-body ms-email-details">
+                <span class="ms-email-sender">{{item.name}}</span>
+                <h6 class="ms-email-subject">{{item.mailtitle}}</h6> 
+                <span class="ms-email-time">{{item.mailtime}}</span>
+                <p class="ms-email-msg">{{item.mailcomment}}</p>
+            </div>
+        </li>
+    </perfect-scrollbar>
+</div>

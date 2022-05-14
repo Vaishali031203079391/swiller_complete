@@ -1,0 +1,186 @@
+.card{
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+
+.ms-panel-body{
+  height: auto;
+}
+
+.ms-quickbar-container .ms-todo-list-container .ms-scrollable{
+  height: max-content;
+}
+/* #card2{
+  height: 100px;
+} */
+
+/* To-do-list */
+.ms-todo-list-container div.form-group input{
+  width: 87%;
+}
+.ms-to-do-task{
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.ms-to-do-task input.ms-task-input{
+  border: 0;
+  width: calc(100% - 65px);
+  background-color: transparent;
+}
+.ms-to-do-task input.ms-task-input:disabled{
+  background: #fff;
+}
+.ms-task-block li.ms-to-do-task:last-child{
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.ms-to-do-task .ms-confirm-task-form{
+  display: inline;
+}
+.ms-to-do-task.task-complete span{
+  text-decoration: line-through;
+}
+.ms-task-block .ms-list-item{
+  margin-bottom: 0;
+  padding: 0.75rem 0;
+}
+.ms-todo-options{
+  display: flex;
+  align-items: center;
+  height: max-content;
+}
+.ms-todo-options.ms-todo-nav{
+  justify-content: flex-end;
+}
+.ms-todo-options li{
+  padding: 0 15px;
+  border-right: 1px solid rgba(0,0,0,.1);
+}
+.ms-todo-options li:last-child{
+  border-right: 0;
+}
+
+.ms-card.ms-qa-card{
+  margin: 0 1rem 1rem 1rem;
+}
+.ms-qa-options{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+.ms-qa-options a{
+  font-size: 12px;
+}
+.ms-note-members li{
+  width: 30px;
+  float: left;
+  margin-left: -10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-animation: notesMembers 0.3s cubic-bezier(0, 4.46, 1, 0.35) 1 forwards;
+  animation: notesMembers 0.3s cubic-bezier(0, 4.46, 1, 0.35) 1 forwards;
+}
+.ms-note-members li:first-child{
+  margin-left: 0;
+}
+.ms-note-members li img{
+  border-radius: 50%;
+  cursor: pointer;
+}
+i.ms-delete-trigger:hover, a.ms-delete-trigger:hover, .ms-dark-theme a.ms-delete-trigger:hover{
+  color: #d9534f;
+  cursor: pointer;
+}
+.ms-deletable .close{
+  color: #878793;
+}
+
+/* Image Upload css*/
+
+.container {
+  max-width: 960px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+  margin: 20px 0 20px;
+}
+
+h1 small {
+  display: block;
+  font-size: 15px;
+  padding-top: 8px;
+  color: gray;
+}
+
+.avatar-upload {
+  position: relative;
+  max-width: 205px;
+  margin: 50px auto;
+  }
+
+  .avatar-upload .avatar-edit {
+    position: absolute;
+    right: 12px;
+    z-index: 1;
+    top: 10px;
+  }
+
+  .avatar-upload .avatar-edit input {
+    display: none;
+}
+
+.avatar-upload .avatar-edit input label {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 0;
+  border-radius: 100%;
+  background: #FFFFFF;
+  border: 1px solid transparent;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  font-weight: normal;
+  transition: all .2s ease-in-out;
+}
+
+.avatar-upload .avatar-edit input label :after {
+  content: "\f040";
+  font-family: 'FontAwesome';
+  color: #757575;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: auto;
+}
+
+.avatar-upload .avatar-edit input label:hover {
+      background: #f1f1f1;
+      border-color: #d6d6d6;
+  }
+
+
+  .avatar-preview {
+      width: 192px;
+      height: 192px;
+      position: relative;
+      border-radius: 100%;
+      border: 6px solid #F8F8F8;
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .avatar-preview div {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+

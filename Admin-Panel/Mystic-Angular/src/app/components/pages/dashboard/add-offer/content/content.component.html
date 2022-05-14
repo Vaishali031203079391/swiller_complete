@@ -1,0 +1,296 @@
+
+<div class="ms-content-wrapper">
+    <div class="row">
+      <div class="col-xl-6 col-md-12">
+        <div class="ms-panel ms-panel-fh">
+            <div class="ms-panel-header">
+                <h6>Add Offer</h6>
+            </div>
+            <div class="ms-panel-body">
+                <ng-wizard [config]="defaultconfig" (stepChanged)="stepChanged($event)"  class="ms-form-wizard style1-wizard">
+                    <ng-wizard-step [title]="'Offer Details'">
+                        <div class="ms-wizard-step">
+                            <div class="form-row">
+                                <div class="col-md-6 mb-3">
+                                    <label>Offer Title</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Offer Title">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-group">
+                                      <label for="exampleSelect">Category</label>
+                                      <select class="form-control" id="exampleSelect">
+                                          <option value="1">Specials</option>
+                                          <option value="2">Events</option>
+                                          <option value="3">Openings</option>
+                                      </select>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="col-md-6 mb-3">
+                                  <label>Offer</label>
+                                  <div class="input-group">
+                                      <input type="text" class="form-control" placeholder="Offer">
+                                  </div>
+                              </div>
+                              <div class="col-md-6 mb-3">
+                                  <label>Dress Code</label>
+                                  <div class="input-group">
+                                      <input type="text" class="form-control" placeholder="Dress Code">
+                                  </div>
+                              </div>
+                          </div>
+                            <div class="form-row">
+                                <div class="col-md-12 mb-3">
+                                    <label>Description</label>
+                                    <div class="input-group">
+                                        <textarea type="text" class="form-control" rows="8"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-wizard-step>
+                    <ng-wizard-step [title]="'Schedule'">
+                        <div class="ms-wizard-step">
+                            <div class="form-row">
+                                <div class="col-md-12">
+                                    <div class="form-row">
+                                      <div class="col-xl-6 col-md-12 mb-3">
+                                         <label>Start Date</label>
+                                          <div class="input-group">
+                                            <input type="date" class="form-control datepicker" name="reminder-date" [(ngModel)]="startDate">
+                                        </div>
+                                      </div>
+                                      <div class="col-xl-6 col-md-12 mb-3">
+                                        <label>End Date</label>
+                                        <div class="input-group">
+                                          <input type="date" class="form-control datepicker" name="reminder-date" [(ngModel)]="endDate">
+                                      </div>
+                                    </div>
+                                      </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                              <div class="col-md-12">
+                                  <div class="form-row">
+                                    <div class="col-xl-6 col-md-12 mb-3">
+                                      <label>Start Time</label>
+                                      <ngb-timepicker [(ngModel)]="startTime"></ngb-timepicker>
+                                    </div>
+                                    <div class="col-xl-6 col-md-12 mb-3">
+                                      <label>End Time</label>
+                                      <ngb-timepicker [(ngModel)]="endTime"></ngb-timepicker>
+                                    </div>
+                                    </div>
+                              </div>
+                          </div>
+
+                            <div class="ms-form-group">
+                              <span class="ms-option-name fs-14">Repeat Offer</span>
+                              <label class="ms-switch float-right">
+                                  <input type="checkbox">
+                                  <span class="ms-switch-slider round"></span>
+                              </label>
+                          </div>
+                            <div class="form-row">
+                                <div class="col-xl-6 col-md-12">
+                                    <label>Repeat Event</label>
+                                    <div class="input-group">
+                                        <select class="form-control">
+                                            <option value="">Daily</option>
+                                            <option value="">Weekly</option>
+                                            <option value="">Monthly</option>
+                                            <option value="">Yearly</option>
+                                            <option value="">Every Alternate Day</option>
+                                            <option value="">Every Fortnight</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-md-12">
+                                    <label>No Of Tables</label>
+                                    <div class="input-group">
+                                        <select class="form-control">
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                            <option value="">5</option>
+                                            <option value="">6</option>
+                                            <option value="">7</option>
+                                            <option value="">8</option>
+                                            <option value="">9</option>
+                                            <option value="">10</option>
+                                            <option value="">11</option>
+                                            <option value="">12</option>
+                                            <option value="">13</option>
+                                            <option value="">14</option>
+                                            <option value="">15</option>
+                                            <option value="">16</option>
+                                            <option value="">17</option>
+                                            <option value="">18</option>
+                                            <option value="">19</option>
+                                            <option value="">20</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </ng-wizard-step>
+
+
+                    <ng-wizard-step [title]="'Slots'">
+                      <div class="ms-wizard-step">
+                        <div class="col-md-12">
+                          <perfect-scrollbar class="ms-quickbar-container ms-todo-list-container ms-scrollable">
+                            <div class="row">
+                              <div class="col-lg-12">
+                                <div class="ms-add-task-block">
+                                  <div class="form-group mx-3 mt-0  fs-14 clearfix">
+                                      <input type="text" class="form-control fs-14 float-left" id="task-block" name="todo-block"
+                                          placeholder="Add a Slot">
+                                      <button type="button" class="ms-btn-icon bg-primary float-right" (click)="open(taskModal)">
+                                          <i class="material-icons text-disabled">add</i>
+                                      </button>
+                                  </div>
+                              </div>
+                              </div>
+                              <div class="col-lg-12">
+                                <div class="col-xl-12 col-md-12">
+                                  <div class="ms-panel ms-panel-fh">
+                                      <div class="ms-panel-body">
+                                          <div class="table-responsive">
+                                              <table class="table thead-primary mb-0">
+                                                  <thead>
+                                                      <tr>
+                                                          <th scope="col">#</th>
+                                                          <th scope="col">Time Slot</th>
+                                                          <th scope="col">Action</th>
+                                                      </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                      <tr *ngFor="let item of time">
+                                                          <th scope="row">{{item.id}}</th>
+                                                          <td>{{item.slot}}</td>
+                                                          <td><i class="flaticon-trash" (click)="removeTask(item.id)"> </i></td>
+                                                      </tr>
+                                                  </tbody>
+                                              </table>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              </div>
+                            </div>
+                        </perfect-scrollbar>
+                        </div>
+
+                      <ng-template #taskModal let-modal>
+                        <div class="modal-header bg-secondary">
+                            <h5 class="modal-title has-icon text-white"> New Slot</h5>
+                            <button type="button" class="close" (click)="modal.dismiss('Cross click')">
+                                <span>×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="ms-form-group">
+                                <label>Slot Number</label>
+                                <div class="form-row">
+                                  <div class="col-md-12">
+                                      <div class="form-row">
+                                        <div class="col-xl-6 col-md-12 mb-3">
+                                          <label>Start Time</label>
+                                          <ngb-timepicker [(ngModel)]="slotStart"></ngb-timepicker>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12 mb-3">
+                                          <label>End Time</label>
+                                          <ngb-timepicker [(ngModel)]="slotEnd"></ngb-timepicker>
+                                        </div>
+                                        </div>
+                                  </div>
+                              </div>
+                                <!-- <input type="text" class="form-control" [(ngModel)]="taks" /> -->
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light" (click)="modal.dismiss('Cross click')">Close</button>
+                            <button type="button" class="btn btn-secondary shadow-none" (click)="onClickTask(); modal.dismiss('Cross click')">Add Slot</button>
+                        </div>
+                    </ng-template>
+
+                      </div>
+                  </ng-wizard-step>
+
+                    <ng-wizard-step [title]="'Upload Images'">
+                      <div class="form-row">
+                        <div class="col-md-12 mb-3">
+                          <h3>Upload Caption</h3>
+                        <!-- <h6>Name, Address and Location</h6> -->
+                      </div>
+                          <div class="col-md-12 mb-3">
+
+                            <ngb-accordion [closeOthers]="true" class="has-gap ms-accordion-chevron" activeIds="static-1">
+                              <ngb-panel id="static-1">
+                                  <ng-template ngbPanelTitle>
+                                      <span>Offer Images</span>
+                                  </ng-template>
+                                  <ng-template ngbPanelContent>
+                                    <h6>Please Upload Caption Image</h6>
+                                    <br>
+                                    <div class="card text-center">
+                                      <div class="card text-center">
+                                        <div class="card-body">
+                                          <a href="#" class="btn btn-primary"><i class="material-icons">add_to_photos</i>add_photo</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </ng-template>
+                              </ngb-panel>
+                              <ngb-panel id="static-2">
+                                  <ng-template ngbPanelTitle>
+                                      <span>Upload More Images</span>
+                                  </ng-template>
+                                  <ng-template ngbPanelContent>
+                                    <h6>Please Upload More Images</h6>
+                                    <br>
+                                    <div class="card text-center">
+                                      <div class="card-body" id="card2">
+                                        <a href="#" class="btn btn-primary"><i class="material-icons">add_to_photos</i>add_photos</a>
+                                      </div>
+                                    </div>
+                                  </ng-template>
+                              </ngb-panel>
+                          </ngb-accordion>
+                        </div>
+                      </div>
+                    </ng-wizard-step>
+                </ng-wizard>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-6 col-md-12">
+      <div class="ms-panel">
+        <div class="ms-panel-header">
+            <h6>All Offers</h6>
+        </div>
+        <div class="ms-panel-body">
+            <div class="row mb-3">
+                <div class="col-lg-3 col-md-6">
+                    <input #search class="search" class="form-control" type="text" placeholder="Search..." (keydown.enter)="onSearch(search.value)">
+                </div>
+            </div>
+            <div class="table-responsive">
+                <ng2-smart-table [settings]="settings" [source]="source" class="table w-100 thead-primary"></ng2-smart-table>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    </div>
+</div>

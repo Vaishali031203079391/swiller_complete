@@ -1,0 +1,156 @@
+<!-- Body Content Wrapper -->
+<div class="ms-content-wrapper">
+    <div class="row">
+
+
+      <div class="col-lg-12">
+        <div class="ms-panel ms-panel-fh">
+          <div class="ms-panel-header">
+              <h6>Dashboard</h6>
+          </div>
+          <div class="ms-panel-body clearfix">
+             <!--  <p class="ms-directions">Use <code>.tab-pills</code> with <code>.has-gap</code> in
+                  <code>.nav-tabs</code>
+              </p> -->
+              <ul ngbNav #navfive="ngbNav" class="nav nav-tabs d-flex tab-pills has-gap nav-justified mb-4">
+                  <li [ngbNavItem]="1">
+                      <a ngbNavLink>Overview</a>
+                      <ng-template ngbNavContent>
+
+                        <div class="row">
+                          <div class="col-12">
+                            <h2 class="section-title">Specials</h2>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6" *ngFor="let item of cardblock">
+                            <div class="ms-card">
+                                <div class="ms-card-img">
+                                    <img src="{{item.img}}" alt="{{item.title}}">
+                                </div>
+                                <div class="ms-card-body">
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                      Offer
+                                    </div>
+                                    <div class="col-md-6 card-content">
+                                      {{item.offer_name}}
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                      Bookings
+                                    </div>
+                                    <div class="col-md-6 card-content">
+                                      {{item.bookings}}
+                                    </div>
+                                  </div>
+                                    <a routerLink="/" class="btn btn-primary btn-block">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                          <h4><a>Load More...</a></h4>
+                          <br>
+                        </div>
+                        </div>
+
+
+                      <div class="row">
+                        <div class="col-md-12">
+                          <h2 class="section-title">Events</h2>
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-6" *ngFor="let item of cardblock">
+                          <div class="ms-card">
+                              <div class="ms-card-img">
+                                  <img src="{{item.img}}" alt="{{item.title}}">
+                              </div>
+                              <div class="ms-card-body">
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    Offer
+                                  </div>
+                                  <div class="col-md-6 card-content">
+                                    {{item.offer_name}}
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    Bookings
+                                  </div>
+                                  <div class="col-md-6 card-content">
+                                    {{item.bookings}}
+                                  </div>
+                                </div>
+                                  <a routerLink="/" class="btn btn-primary btn-block">Learn More</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-12">
+                        <h4><a>Load More...</a></h4>
+                        <br>
+                      </div>
+                      </div>
+
+
+                      <div class="row">
+                        <div class="col-md-12">
+                          <h2 class="section-title">Openings</h2>
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-6" *ngFor="let item of cardblock">
+                          <div class="ms-card">
+                              <div class="ms-card-img">
+                                  <img src="{{item.img}}" alt="{{item.title}}">
+                              </div>
+                              <div class="ms-card-body">
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    Offer
+                                  </div>
+                                  <div class="col-md-6 card-content">
+                                    {{item.offer_name}}
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    Bookings
+                                  </div>
+                                  <div class="col-md-6 card-content">
+                                    {{item.bookings}}
+                                  </div>
+                                </div>
+                                  <a routerLink="/" class="btn btn-primary btn-block">Learn More</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-12">
+                        <h4><a>Load More...</a></h4>
+                        <br>
+                      </div>
+                      </div>
+                      </ng-template>
+                  </li>
+                  <li [ngbNavItem]="2">
+                      <a ngbNavLink>Specials </a>
+                      <ng-template ngbNavContent>
+                        <app-specials-list></app-specials-list>
+                      </ng-template>
+                  </li>
+                  <li [ngbNavItem]="3">
+                      <a ngbNavLink>Events </a>
+                      <ng-template ngbNavContent>
+                        <app-new-events-list></app-new-events-list>
+                      </ng-template>
+                  </li>
+                  <li [ngbNavItem]="4">
+                    <a ngbNavLink>Openings </a>
+                    <ng-template ngbNavContent>
+                      <app-openings></app-openings>
+                    </ng-template>
+                </li>
+              </ul>
+              <div [ngbNavOutlet]="navfive"></div>
+          </div>
+      </div>
+      </div>
+
+    </div>
+</div>

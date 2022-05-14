@@ -1,0 +1,53 @@
+[
+    {
+        "id": 1,
+        "img": "assets/img/people/people-11.jpg",
+        "name": "James Zathila",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc",
+        "moreuser": [
+            {
+                "img": "assets/img/people/people-3.jpg"
+            },
+            {
+                "img": "assets/img/people/people-5.jpg"
+            },
+            {
+                "img": "assets/img/people/people-12.jpg"
+            }
+        ],
+        "totaluser": "+ 12 more"
+    },
+    {
+        "id": 2,
+        "img": "assets/img/people/people-9.jpg",
+        "name": "Raymart Sandiago",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc",
+        "moreuser": [
+            {
+                "img": "assets/img/people/people-10.jpg"
+            },
+            {
+                "img": "assets/img/people/people-11.jpg"
+            }
+        ],
+        "totaluser": ""
+    },
+    {
+        "id": 3,
+        "img": "assets/img/people/people-10.jpg",
+        "name": "John Doe",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc",
+        "moreuser": [
+            {
+                "img": "assets/img/people/people-8.jpg"
+            },
+            {
+                "img": "assets/img/people/people-9.jpg"
+            },
+            {
+                "img": "assets/img/people/people-12.jpg"
+            }
+        ],
+        "totaluser": "+ 4 more"
+    }
+]

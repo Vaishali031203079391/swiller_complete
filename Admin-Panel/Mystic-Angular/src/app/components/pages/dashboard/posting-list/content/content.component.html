@@ -1,0 +1,167 @@
+<!-- Body Content Wrapper -->
+<div class="ms-content-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ms-panel ms-panel-fh">
+        <div class="ms-panel-header">
+            <h6>Dashboard</h6>
+        </div>
+        <div class="ms-panel-body clearfix">
+           <!--  <p class="ms-directions">Use <code>.tab-pills</code> with <code>.has-gap</code> in
+                <code>.nav-tabs</code>
+            </p> -->
+            <ul ngbNav #navfive="ngbNav" class="nav nav-tabs d-flex tab-pills has-gap nav-justified mb-4">
+                <li [ngbNavItem]="1">
+                    <a ngbNavLink>Restarunts</a>
+                    <ng-template ngbNavContent>
+                      <div class="ms-content-wrapper">
+                        <div class="row">
+
+                          <br>
+                          <br>
+
+                            <!----SECTION TWO---------->
+
+                            <div class="col-lg-12">
+                              <div class="ms-panel">
+                                <div class="ms-panel-header">
+                                  <div class="row">
+                                    <div class="col-xl-10">
+                                      <h6>Restarunt Posting List</h6>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="ms-panel-body">
+                                    <div class="row mb-3">
+                                        <div class="col-lg-3 col-md-6">
+                                            <input #search class="search" class="form-control" type="text" placeholder="Search..." (keydown.enter)="onSearch(search.value)">
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                      <ng2-smart-table [settings]="settings" [source]="source" class="table w-100 thead-primary"></ng2-smart-table>
+                                        <!-- <ng2-smart-table [settings]="settings" [source]="source" class="table w-100 thead-primary" (userRowSelect)="open(modalsix, $event)"></ng2-smart-table> -->
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+
+
+                            <!----- RECENTS ORDERS REQUESTED--->
+                            <div class="col-xl-6 col-md-12">
+                                <div class="ms-panel">
+                                    <div class="ms-panel-header">
+                                        <h6>Ratings</h6>
+                                    </div>
+                                    <div class="ms-panel-body">
+                                        <canvas baseChart [datasets]="PieChartData" [labels]="PieChartLabels" [options]="PieChartOptions"
+                                            [chartType]="PieChartType">
+                                        </canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-------MONTHLY REVENUE------------->
+
+                            <div class="col-xl-6 col-md-12">
+                              <div class="ms-panel ms-panel-fh">
+                                  <div class="ms-panel-header">
+                                    <div class="row">
+                                      <div class="col-xl-6 col-md-12">
+                                        <h6>Monthly Resturant Wise Bookings</h6>
+                                      </div>
+                                      <div class="col-xl-6 col-md-12">
+                                        <div class="input-group">
+                                          <select class="form-control">
+                                              <option value="">January</option>
+                                              <option value="">February</option>
+                                              <option value="">March</option>
+                                              <option value="">April</option>
+                                              <option value="">May</option>
+                                              <option value="">June</option>
+                                              <option value="">July</option>
+                                              <option value="">August</option>
+                                              <option value="">September</option>
+                                              <option value="">October</option>
+                                              <option value="">November</option>
+                                              <option value="">December</option>
+                                          </select>
+                                      </div>
+                                       <!--  <div class="btn-group btn-group-toggle ms-graph-metrics" ngbRadioGroup name="radioBasic"
+                                            [(ngModel)]="model">
+                                            <label ngbButtonLabel class="btn btn-sm btn-outline-primary day">
+                                                <input ngbButton type="radio" [value]="1" (click)="day()"> Day
+                                            </label>
+                                            <label ngbButtonLabel class="btn btn-sm btn-outline-primary month">
+                                                <input ngbButton type="radio" value="middle" (click)="month()"> Month
+                                            </label>
+                                            <label ngbButtonLabel class="btn btn-sm btn-outline-primary year">
+                                                <input ngbButton type="radio" [value]="false" (click)="year()"> Year
+                                            </label>
+                                        </div> -->
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="ms-panel-body">
+                                    <span class="progress-label">Week 1</span><span class="progress-status">83%</span>
+                                    <div class="progress progress-tiny">
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 83%" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <span class="progress-label">Week 2</span><span class="progress-status">50%</span>
+                                    <div class="progress progress-tiny">
+                                        <div class="progress-bar bg-secondary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <span class="progress-label">Week 3</span><span class="progress-status">75%</span>
+                                    <div class="progress progress-tiny">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <span class="progress-label">Week 4</span><span class="progress-status">92%</span>
+                                    <div class="progress progress-tiny">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                        </div>
+                    </div>
+
+                    </ng-template>
+                </li>
+                <li [ngbNavItem]="2">
+                    <a ngbNavLink>Offers Overview </a>
+                    <ng-template ngbNavContent>
+                      <!-- <app-offers></app-offers> -->
+                    </ng-template>
+                </li>
+                <li [ngbNavItem]="3">
+                    <a ngbNavLink>Events </a>
+                    <ng-template ngbNavContent>
+                      <!-- <app-specials></app-specials> -->
+                    </ng-template>
+                </li>
+                <li [ngbNavItem]="4">
+                  <a ngbNavLink>Openings </a>
+                  <ng-template ngbNavContent>
+                    <!-- <app-new-events></app-new-events> -->
+                  </ng-template>
+              </li>
+              <li [ngbNavItem]="4">
+                <a ngbNavLink>Specials </a>
+                <ng-template ngbNavContent>
+                  <!-- <app-new-events></app-new-events> -->
+                </ng-template>
+            </li>
+            </ul>
+            <div [ngbNavOutlet]="navfive"></div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+

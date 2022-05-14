@@ -1,0 +1,52 @@
+<!-- Body Content Wrapper -->
+<div class="ms-content-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ms-panel ms-panel-fh">
+        <div class="ms-panel-header">
+            <h6>Dashboard</h6>
+        </div>
+        <div class="ms-panel-body clearfix">
+           <!--  <p class="ms-directions">Use <code>.tab-pills</code> with <code>.has-gap</code> in
+                <code>.nav-tabs</code>
+            </p> -->
+            <ul ngbNav #navfive="ngbNav" class="nav nav-tabs d-flex tab-pills has-gap nav-justified mb-4">
+                <li [ngbNavItem]="1">
+                    <a ngbNavLink>Restarunts</a>
+                    <ng-template ngbNavContent>
+                      <app-restarunt-overview></app-restarunt-overview>
+                    </ng-template>
+                </li>
+                <li [ngbNavItem]="2">
+                    <a ngbNavLink>Offers Overview </a>
+                    <ng-template ngbNavContent>
+                      <app-offers></app-offers>
+                    </ng-template>
+                </li>
+                <li [ngbNavItem]="3">
+                    <a ngbNavLink>Events </a>
+                    <ng-template ngbNavContent>
+                      <app-specials></app-specials>
+                    </ng-template>
+                </li>
+                <li [ngbNavItem]="4">
+                  <a ngbNavLink>Openings </a>
+                  <ng-template ngbNavContent>
+                    <app-new-events></app-new-events>
+                  </ng-template>
+              </li>
+              <li [ngbNavItem]="4">
+                <a ngbNavLink>Specials </a>
+                <ng-template ngbNavContent>
+                  <app-new-events></app-new-events>
+                </ng-template>
+            </li>
+            </ul>
+            <div [ngbNavOutlet]="navfive"></div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,187 @@
+<form name="eventForm" [formGroup]="eventForm" class="event-form p-3">
+    <div class="row">
+      <div class="col-md-12 form-group">
+        <h4>{{selectedOffer}}</h4>
+      </div>
+    </div>
+    <!-- <div class="row">
+      <div class="col-md-12 form-group">
+        <br/>
+          <div ngbDropdown name="offer_type" formControlName="offer_type">
+            <button class="btn btn-warning" id="gfg" ngbDropdownToggle>{{selectedOffer}}</button>
+              <div ngbDropdownMenu="gfg">
+                <button ngbDropdownItem *ngFor="let offer of offers" (click)="ChangeOffer(offer)" >{{offer}}</button>
+              </div>
+          </div>
+      </div>
+    </div> -->
+
+    <div class="row">
+      <div class="col-md-12 form-group">
+        <div class="input-group mb-3">
+          <div class="custom-file">
+              <input type="file" class="custom-file-input" id="inputGroupFile02">
+              <label class="custom-file-label" for="inputGroupFile02"
+                  aria-describedby="inputGroupFileAddon02">Upload Image</label>
+          </div>
+          <div class="input-group-append">
+              <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+          </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm tumbnail">
+          <i class="material-icons-outlined">add_to_photos</i>
+        </div>
+        <div class="col-sm tumbnail">
+          <i class="material-icons-outlined">add_to_photos</i>
+        </div>
+        <div class="col-sm tumbnail">
+          <i class="material-icons-outlined">add_to_photos</i>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm tumbnail">
+          <i class="material-icons-outlined">add_to_photos</i>
+        </div>
+        <div class="col-sm tumbnail">
+          <i class="material-icons-outlined">add_to_photos</i>
+        </div>
+        <div class="col-sm tumbnail">
+          <i class="material-icons-outlined">add_to_photos</i>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 form-group">
+        <input class="form-control form-control-rounded" 
+          name="title" 
+          formControlName="title" 
+          placeholder="Title*">
+      </div>  
+    </div>
+
+    <div class="row" formGroupName="meta">
+      <div class="col-md-12 form-group">
+        <div class="input-group">
+        <input 
+          type="text" 
+          class="form-control form-control-rounded"
+          name="location" 
+          formControlName="location" 
+          placeholder="Location">
+          <div class="input-group-append">
+            <button class="btn btn-secondary btn-rounded" (click)="startDate.toggle()" type="button">
+              <i class="icon-regular i-place-4 material-icons-outlined">place</i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12 form-group">
+        <textarea 
+          class="form-control form-control-rounded" 
+          formControlName="description" 
+          placeholder="Description" 
+          max-rows="4">
+          </textarea>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 form-group">
+        <div class="input-group">
+          <input type="text"
+          class="form-control form-control-rounded"
+          ngbDatepicker 
+          #startDate="ngbDatepicker"
+          placeholder="Start Date"
+          name="startDate" 
+          formControlName="start"
+          >
+          <div class="input-group-append">
+            <button class="btn btn-secondary btn-rounded" (click)="startDate.toggle()" type="button">
+              <i class="icon-regular i-Calendar-4 material-icons-outlined">today</i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 form-group">
+        <div class="input-group">
+          <input type="text"
+          class="form-control form-control-rounded"
+          ngbDatepicker 
+          #endDate="ngbDatepicker"
+          placeholder="End Date" 
+          name="endDate" 
+          formControlName="end">
+          <div class="input-group-append">
+            <button class="btn btn-secondary btn-rounded" (click)="endDate.toggle()" type="button">
+              <i class="icon-regular i-Calendar-4 material-icons-outlined">today</i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 form-group">
+        <input 
+          class="form-control form-control-rounded" 
+          name="offer" 
+          formControlName="offer" 
+          placeholder="Offer">
+      </div>  
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 form-group">
+        <input 
+          class="form-control form-control-rounded" 
+          name="dresscode" 
+          formControlName="dresscode" 
+          placeholder="Dresscode">
+      </div>
+    </div>
+
+  </form>
+  <div class="modal-footer">
+    <button [disabled]="eventForm.invalid" class="btn btn-primary btn-rounded" (click)="activeModal.close({action: 'save', event: eventForm.value})">Save</button>
+  </div>
+
+    <!-- <ng-number-picker [(value)]="value"></ng-number-picker> -->
+
+    <!-- <div class="row" formGroupName="color">
+      <div class="col-md-6 form-group">
+        <input 
+          class="form-control form-control-rounded" 
+          name="title" 
+          formControlName="primary" 
+          placeholder="Title" 
+          placeholder="Primary color" 
+          [(colorPicker)]="event?.color.primary"
+          [style.background]="event?.color.primary" 
+          (colorPickerChange)="eventForm.patchValue({color:{primary: event?.color.primary}})"
+          >
+      </div>
+      <div class="col-md-6 form-group">
+        <input 
+          class="form-control form-control-rounded" 
+          name="secondaryColor" 
+          formControlName="secondary" 
+          placeholder="Secondary color"
+          [(colorPicker)]="event?.color.secondary" 
+          [style.background]="event?.color.secondary" 
+          (colorPickerChange)="eventForm.patchValue({color:{secondary: event?.color.secondary}})"
+          >
+      </div>
+    </div> -->
+    

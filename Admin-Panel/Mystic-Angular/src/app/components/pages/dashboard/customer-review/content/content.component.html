@@ -1,0 +1,57 @@
+<!-- Body Content Wrapper -->
+<div class="ms-content-wrapper">
+    <div class="row">
+        <!-- Recent Support Tickets -->
+        <div class="col-xl-12 col-md-12">
+            <div class="ms-panel ms-panel-fh">
+                <div class="ms-panel-header">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h6>Recent Customer Reviews</h6>
+                            <p>Some of the recent customer reviews</p>
+                        </div>
+                        <a routerLink="/" class="btn btn-primary"> View All</a>
+                    </div>
+                </div>
+                <div class="ms-panel-body p-0">
+                    <ul class="ms-list ms-feed ms-twitter-feed ms-recent-support-tickets">
+                        <li class="ms-list-item" *ngFor="let item of paginateData">
+                            <a routerLink="/" class="media clearfix">
+                                <img src="{{item.userimg}}" class="ms-img-round ms-img-small" alt="{{item.username}}">
+                                <div class="media-body">
+                                    <span class="my-2 d-block"> <i class="material-icons">date_range</i>
+                                        {{item.date}}</span>
+                                    <p class="d-block"> {{item.query}}</p>
+                                    <div class="d-flex justify-content-between align-items-end">
+                                        <div class="ms-feed-controls">
+                                            <span>
+                                                <i class="material-icons">chat</i> {{item.comment}}
+                                            </span>
+                                            <span>
+                                                <i class="material-icons">attachment</i> {{item.attachment}}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-6 col-md-6 col-sm-6">
+          <ngb-pagination [collectionSize]="collectionSize" class="active-round" [(page)]="page" [pageSize]="pageSize" (pageChange)="getPremiumData();"
+              aria-label="Default pagination">
+          </ngb-pagination>
+      </div>
+      <div class="col-xl-6 col-md-6 col-sm-6">
+          <select class="custom-select" style="width: auto" [(ngModel)]="pageSize" (ngModelChange)="getPremiumData();">
+            <option [ngValue]="2">2 items per page</option>
+            <option [ngValue]="4">4 items per page</option>
+            <option [ngValue]="6">6 items per page</option>
+          </select>
+      </div>
+    </div>
+</div>

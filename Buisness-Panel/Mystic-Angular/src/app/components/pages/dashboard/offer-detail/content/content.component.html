@@ -1,0 +1,443 @@
+<div class="ms-content-wrapper cardspage">
+    <div class="ms-profile-overview profilepage">
+        <div class="ms-profile-cover">
+            <img class="ms-profile-img" src="assets/img/people/people-12.jpg" alt="people">
+            <div class="ms-profile-user-info">
+                <h1 class="ms-profile-username">Weekend Sale</h1>
+                <h2 class="ms-profile-role">Events Offer</h2>
+            </div>
+            <div class="ms-profile-user-buttons">
+                <a routerLink="/" class="btn btn-primary mr-2"> <i class="material-icons">person_add</i>Edit</a>
+                <a routerLink="/" class="btn btn-light"> <i class="material-icons">file_download</i> Delete</a>
+            </div>
+        </div>
+        <ul ngbNav #nav="ngbNav" class="ms-profile-navigation nav nav-tabs tabs-bordered">
+            <li [ngbNavItem]="1">
+                <a ngbNavLink> Overview </a>
+                <ng-template ngbNavContent>
+                    <div class="row">
+                        <div class="col-xl-7 col-md-12">
+                            <div class="ms-panel ms-panel-fh">
+                                <div class="ms-panel-body">
+                                    <h2 class="section-title">About</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non elit nisl.
+                                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                                        himenaeos.
+                                        Aenean luctus, justo id pellentesque imperdiet, augue metus ornare quam, in
+                                        pulvinar massa erat nec dui. Nam at facilisis nulla.
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non elit nisl.
+                                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                                        himenaeos.
+                                        Aenean luctus, justo id pellentesque imperdiet, augue metus ornare quam, in
+                                        pulvinar massa erat nec dui. Nam at facilisis nulla.
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non elit nisl.
+                                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                                        himenaeos.
+                                        Aenean luctus, justo id pellentesque imperdiet, augue metus ornare quam, in
+                                        pulvinar massa erat nec dui. Nam at facilisis nulla.
+                                    </p>
+                                    <div class="ms-profile-skills">
+                                        <h2 class="section-title">Tags</h2>
+                                        <ul class="ms-skill-list">
+                                            <li class="ms-skill" *ngFor="let item of tags">{{item.title}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-md-12">
+                            <div class="ms-panel ms-panel-fh">
+                                <div class="ms-panel-body">
+                                    <ul class="ms-profile-stats">
+                                        <li>
+                                            <h3 class="ms-count">5790</h3>
+                                            <span>Followers</span>
+                                        </li>
+                                        <li>
+                                            <h3 class="ms-count">4.8</h3>
+                                            <span>User Rating</span>
+                                        </li>
+                                    </ul>
+                                    <h2 class="section-title">Basic Information</h2>
+                                    <table class="table ms-profile-information">
+                                        <tbody>
+                                            <tr *ngFor="let item of information">
+                                                <th scope="row">{{item.title}}</th>
+                                                <td>{{item.text}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="ms-panel">
+                                <div class="ms-panel-body pb-0">
+                                    <h2 class="section-title">Your Latest Offers</h2>
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let item of offers">
+                                            <div class="ms-card">
+                                                <div class="ms-card-body">
+                                                    <div class="media fs-14">
+                                                        <div class="mr-2 align-self-center">
+                                                            <img src="{{item.offer_img_url}}" class="ms-img-round"
+                                                                alt="{{item.offer}}">
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h6>{{item.offer}} </h6>
+                                                            <div class="dropdown float-right" ngbDropdown>
+                                                                <a href="javascript:void(0)" class="toggle-icon-none" ngbDropdownToggle>
+                                                                    <i class="material-icons">more_vert</i>
+                                                                </a>
+                                                                <ul ngbDropdownMenu
+                                                                    class="dropdown-menu dropdown-menu-right">
+                                                                    <li class="ms-dropdown-list">
+                                                                        <a class="media p-2" routerLink="/">
+                                                                            <div class="media-body">
+                                                                                <span>Edit</span>
+                                                                            </div>
+                                                                        </a>
+                                                                        <a class="media p-2" routerLink="/">
+                                                                            <div class="media-body">
+                                                                                <span>Delete</span>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <p class="fs-12 my-1 text-disabled">{{item.posted_time}}</p>
+                                                        </div>
+                                                    </div>
+                                                    <h6>{{item.category}}</h6>
+                                                    <p>{{item.description}}</p>
+                                                </div>
+                                                <div class="ms-card-img">
+                                                    <img src="{{item.postimg}}" alt="{{item.category}}">
+                                                </div>
+                                                <div class="ms-card-footer text-disabled d-flex">
+                                                    <div class="ms-card-options">
+                                                        <i class="fa fa-share"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </li>
+            <li [ngbNavItem]="2">
+                <a ngbNavLink>Statics </a>
+                <ng-template ngbNavContent>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="ms-panel">
+                                <div class="ms-panel-header">
+                                    <h6>Round Progress Bars</h6>
+                                </div>
+                                <div class="ms-panel-body">
+                                    <!-- <p class="ms-directions">Use <code>.bg-{{'{state}'}}</code> in
+                                        <code>.progress-circle</code></p> -->
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="progress-rounded">
+                                                <div class="progress-value">Total Bookings 120</div>
+                                                <svg>
+                                                    <circle class="progress-cicle bg-success" cx="65" cy="65" r="57"
+                                                        stroke-width="16" fill="none" aria-valuenow="120"
+                                                        aria-orientation="vertical" aria-valuemin="0"
+                                                        aria-valuemax="120" role="slider"
+                                                        [style.strokeDashoffset.px]="358.141563 - (358.141563 / 120) * 120">
+                                                    </circle>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="progress-rounded">
+                                                <div class="progress-value">New Bookings 68</div>
+                                                <svg>
+                                                    <circle class="progress-cicle bg-info" cx="65" cy="65" r="57"
+                                                        stroke-width="16" fill="none" aria-valuenow="68"
+                                                        aria-orientation="vertical" aria-valuemin="0"
+                                                        aria-valuemax="120" role="slider"
+                                                        [style.strokeDashoffset.px]="358.141563 - (358.141563 / 120) * 68">
+                                                    </circle>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="progress-rounded">
+                                                <div class="progress-value">Repeated Bookings 22</div>
+                                                <svg>
+                                                    <circle class="progress-cicle bg-warning" cx="65" cy="65" r="57"
+                                                        stroke-width="16" fill="none" aria-valuenow="22"
+                                                        aria-orientation="vertical" aria-valuemin="0"
+                                                        aria-valuemax="120" role="slider"
+                                                        [style.strokeDashoffset.px]="358.141563 - (358.141563 / 120) * 22">
+                                                    </circle>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="progress-rounded">
+                                                <div class="progress-value">Cancelled Bookings 30</div>
+                                                <svg>
+                                                    <circle class="progress-cicle bg-danger" cx="65" cy="65" r="57"
+                                                        stroke-width="16" fill="none" aria-valuenow="30"
+                                                        aria-orientation="vertical" aria-valuemin="0"
+                                                        aria-valuemax="120" role="slider"
+                                                        [style.strokeDashoffset.px]="358.141563 - (358.141563 / 120) * 30">
+                                                    </circle>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="ms-panel ms-panel-fh">
+                              <div class="ms-panel-header">
+                                <div class="row">
+                                  <div class="col-xl-6 col-md-12">
+                                    <h6>Monthly Revenue</h6>
+                                  </div>
+                                  <div class="col-xl-6 col-md-12">
+                                    <div class="input-group">
+                                      <select class="form-control">
+                                          <option value="">January</option>
+                                          <option value="">February</option>
+                                          <option value="">March</option>
+                                          <option value="">April</option>
+                                          <option value="">May</option>
+                                          <option value="">June</option>
+                                          <option value="">July</option>
+                                          <option value="">August</option>
+                                          <option value="">September</option>
+                                          <option value="">October</option>
+                                          <option value="">November</option>
+                                          <option value="">December</option>
+                                      </select>
+                                  </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="ms-panel-body">
+                                <span class="progress-label">Week 1</span><span class="progress-status">83%</span>
+                                <div class="progress progress-tiny">
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 83%" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <br>
+                                <span class="progress-label">Week 2</span><span class="progress-status">50%</span>
+                                <div class="progress progress-tiny">
+                                    <div class="progress-bar bg-secondary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <br>
+                                <span class="progress-label">Week 3</span><span class="progress-status">75%</span>
+                                <div class="progress progress-tiny">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <br>
+                                <span class="progress-label">Week 4</span><span class="progress-status">92%</span>
+                                <div class="progress progress-tiny">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xl-2 col-md-6 canvas">
+                        <div class="ms-card ms-widget has-graph-full-width ms-infographics-widget">
+                            <span class="ms-chart-label bg-danger"><i class="material-icons">arrow_downward</i> 4.5%</span>
+                            <div class="ms-card-body media">
+                                <div class="media-body">
+                                    <span>Total Bookings  </span>
+                                    <h2>120</h2>
+                                </div>
+                            </div>
+                            <canvas baseChart [datasets]="linetwoChartData" [labels]="linetwoChartLabels" [options]="lineChartOptions" [chartType]="lineChartType">
+                            </canvas>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 canvas">
+                        <div class="ms-card ms-widget has-graph-full-width ms-infographics-widget">
+                            <span class="ms-chart-label bg-success"><i class="material-icons">arrow_upward</i> 12.5%</span>
+                            <div class="ms-card-body media">
+                                <div class="media-body">
+                                    <span>New Bookings  </span>
+                                    <h2>68</h2>
+                                </div>
+                            </div>
+                            <canvas baseChart [datasets]="linethreeChartData" [labels]="linethreeChartLabels"
+                                [options]="lineChartOptions" [chartType]="lineChartType">
+                            </canvas>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 canvas">
+                        <div class="ms-card ms-widget has-graph-full-width ms-infographics-widget">
+                            <span class="ms-chart-label bg-success"><i class="material-icons">arrow_upward</i> 9.5%</span>
+                            <div class="ms-card-body media">
+                                <div class="media-body">
+                                    <span>Repeated Bookings  </span>
+                                    <h2>22</h2>
+                                </div>
+                            </div>
+                            <canvas baseChart [datasets]="linefourChartData" [labels]="linefourChartLabels"
+                                [options]="lineChartOptions" [chartType]="lineChartType">
+                            </canvas>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 canvas">
+                      <div class="ms-card ms-widget has-graph-full-width ms-infographics-widget">
+                          <span class="ms-chart-label bg-success"><i class="material-icons">arrow_upward</i> 9.5%</span>
+                          <div class="ms-card-body media">
+                              <div class="media-body">
+                                  <span>Cancelled Bookings  </span>
+                                  <h2>30</h2>
+                              </div>
+                          </div>
+                          <canvas baseChart [datasets]="linefourChartData" [labels]="linefourChartLabels"
+                              [options]="lineChartOptions" [chartType]="lineChartType">
+                          </canvas>
+                      </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="ms-panel">
+                      <div class="ms-panel-header">
+                          <h6>Recent Bookings</h6>
+                      </div>
+                      <div class="ms-panel-body">
+                          <div class="row mb-3">
+                              <div class="col-lg-3 col-md-6">
+                                  <input #search class="search" class="form-control" type="text" placeholder="Search..." (keydown.enter)="onSearch(search.value)">
+                              </div>
+                          </div>
+                          <div class="table-responsive">
+                              <ng2-smart-table [settings]="settings" [source]="source" class="table w-100 thead-primary" (userRowSelect)="open(modalsix, $event)"></ng2-smart-table>
+                          </div>
+                      </div>
+                  </div>
+                  </div>
+                    </div>
+                </ng-template>
+            </li>
+            <li [ngbNavItem]="3">
+                <a ngbNavLink>Gallery </a>
+                <ng-template ngbNavContent>
+                    <div class="row">
+                        <div class="col-lg-12">
+                          <div class="ms-panel">
+                            <div class="ms-panel-header">
+                                <h6>Default Portfolio</h6>
+                            </div>
+                            <div class="ms-panel-body pb-0">
+                                <div class="ms-portfolio card-columns">
+                                    <a routerLink="/" class="card ms-portfolio-item" *ngFor="let item of defaultportfolio">
+                                        <img src="{{item.photo}}" alt="{{item.title}}">
+                                        <div class="ms-portfolio-item-content">
+
+                                            <div class="item-content-inner">
+                                                <span>
+                                                    <i class="material-icons">edit</i>
+                                                </span>
+                                                <span>
+                                                    <i class="material-icons">delete</i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+
+                    </div>
+                </ng-template>
+              </li>
+        </ul>
+    </div>
+    <div [ngbNavOutlet]="nav"></div>
+
+</div>
+
+<ng-template #modalsix let-modal>
+  <div class="modal-header bg-primary">
+      <h3 class="modal-title has-icon text-white"><i class="fa fa-calendar"></i>
+          Approve Booking Request</h3>
+      <button type="button" class="close" (click)="modal.dismiss('Cross click')"><span
+              aria-hidden="true">&times;</span></button>
+  </div>
+  <div class="modal-body">
+      <div>
+        <img [src]="fromParent.offer_url" class="img-card">
+      </div>
+      <br>
+      <div class="row modalCard">
+        <div class="col-xl-6 md-6">
+          <h6>Customer Name</h6>
+        </div>
+        <div class="col-xl-6 md-6 card-content">
+          <p>{{fromParent.customer_name}}</p>
+        </div>
+      </div>
+      <div class="row modalCard">
+        <div class="col-xl-6 md-6">
+          <h6>No Of Guests</h6>
+        </div>
+        <div class="col-xl-6 md-6 card-content">
+          <p>{{fromParent.no_of_guests}}</p>
+        </div>
+      </div>
+      <div class="row modalCard">
+        <div class="col-xl-6 md-6">
+          <h6>Booking Date</h6>
+        </div>
+        <div class="col-xl-6 md-6 card-content">
+          <p>{{fromParent.booking_date}}</p>
+        </div>
+      </div>
+      <div class="row modalCard">
+        <div class="col-xl-6 md-6">
+          <h6>Time Slot</h6>
+        </div>
+        <div class="col-xl-6 md-6 card-content">
+          <p>{{fromParent.time_slot}}</p>
+        </div>
+      </div>
+      <div class="row modalCard">
+        <div class="col-xl-6 md-6">
+          <h6>No Of Table</h6>
+        </div>
+        <div class="col-xl-6 md-6 card-content">
+          <p>{{fromParent.no_of_tables}}</p>
+        </div>
+      </div>
+      <div class="row modalCard">
+        <div class="col-xl-6 md-6">
+          <h6>Offer</h6>
+        </div>
+        <div class="col-xl-6 md-6 card-content">
+          <p>{{fromParent.offer}}</p>
+        </div>
+      </div>
+      <div class="row modalCard">
+        <div class="col-xl-6 md-6">
+          <h6>Booking Status</h6>
+        </div>
+        <div class="col-xl-6 md-6 card-content">
+          <p>{{fromParent.booking_status}}</p>
+        </div>
+      </div>
+  </div>
+  <div class="modal-footer">
+    <!--   <div class="modal-notice">
+          <a routerLink="/" class="btn-link"> Learn More </a>
+      </div> -->
+      <button type="button" class="btn btn-light" (click)="modal.dismiss('Cross click')" *ngIf="fromParent.booking_status == 'pending'">Don't
+          Approve</button>
+      <button type="button" class="btn btn-primary shadow-none" (click)="modal.dismiss('Cross click')" *ngIf="fromParent.booking_status == 'pending'">Approve</button>
+  </div>
+</ng-template>

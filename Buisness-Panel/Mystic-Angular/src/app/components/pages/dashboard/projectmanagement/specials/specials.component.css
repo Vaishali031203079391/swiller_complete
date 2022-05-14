@@ -1,0 +1,27 @@
+.canvas{
+  width: 800px;
+}
+
+.card-content{
+  text-align: right;
+}
+
+.media-body{
+  font-size: x-small;
+}
+
+.img-card{
+  width: 100%;
+  height: 200px;
+}
+
+.modalCard{
+  padding: 5px;
+  margin: 5px;
+}
+
+.tumbnail{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}

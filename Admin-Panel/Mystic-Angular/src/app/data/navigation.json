@@ -1,0 +1,164 @@
+[
+  {
+    "id":1,
+    "linktext":"Edit profile",
+    "child":true,
+    "icon":"edit",
+    "submenu":[
+        {
+            "id":11,
+            "linktext":"Edit Profile",
+            "link":"/dashboard/edit-profile"
+        }
+    ]
+  },
+  {
+    "id":2,
+    "linktext":"Dashboard",
+    "child":true,
+    "icon":"dashboard",
+    "submenu":[
+        {
+            "id":21,
+            "linktext":"Admin Panel",
+            "link":"/dashboard/admin-panel"
+        }
+    ]
+  },
+  {
+    "id":3,
+    "linktext":"Restarunt",
+    "child":true,
+    "icon":"restaurant",
+    "submenu":[
+        {
+            "id":31,
+            "linktext":"Restarunt List",
+            "link":"/dashboard/restarunt-list"
+        },
+        {
+          "id":32,
+          "linktext":"Posting List",
+          "link":"/dashboard/posting-list"
+        },
+        {
+        "id":33,
+        "linktext":"Booking List",
+        "link":"/dashboard/booking-list"
+        }
+      ]
+    },
+    {
+      "id":4,
+      "linktext":"Customers",
+      "child":true,
+      "icon":"people",
+      "submenu":[
+          {
+              "id":41,
+              "linktext":"Customers List",
+              "link":"/dashboard/customer-list"
+          }
+      ]
+    },
+    {
+      "id":5,
+      "linktext":"Call/Chat Details",
+      "child":true,
+      "icon":"textsms",
+      "submenu":[
+          {
+              "id":51,
+              "linktext":"Call Details",
+              "link":"/dashboard/call-details"
+          },
+          {
+            "id":52,
+            "linktext":"Chat Details",
+            "link":"/dashboard/chat-details"
+        }
+      ]
+    },
+    {
+      "id":6,
+      "linktext":"Revenue",
+      "child":true,
+      "icon":"money",
+      "submenu":[
+          {
+              "id":61,
+              "linktext":"Customers Revenue",
+              "link":"/dashboard/restarunt-revenue"
+          },
+          {
+            "id":62,
+            "linktext":"Restarunts Revenue",
+            "link":"/dashboard/customers-revenue"
+        },
+        {
+          "id":63,
+            "linktext":"Promotions Revenue",
+            "link":"/dashboard/promotions-revenue"
+        }
+      ]
+    },
+    {
+      "id":7,
+      "linktext":"Invoice",
+      "child":true,
+      "icon":"description",
+      "submenu":[
+          {
+              "id":71,
+              "linktext":"Invoice Detail",
+              "link":"/dashboard/invoice"
+          },
+          {
+            "id":72,
+            "linktext":"Invoice List",
+            "link":"/dashboard/invoice-list"
+          }
+      ]
+    },
+    {
+      "id":8,
+      "linktext":"Promotional Spaces",
+      "child":true,
+      "icon":"local_offer",
+      "submenu":[
+          {
+              "id":81,
+              "linktext":"Promotional Spaces",
+              "link":"/dashboard/promotional-spaces"
+          }
+      ]
+    },
+    {
+      "id":9,
+      "linktext":"Food Feed Updates",
+      "child":true,
+      "icon":"fastfood",
+      "submenu":[
+          {
+              "id":91,
+              "linktext":"Food Feed Updates",
+              "link":"/dashboard/food-feed-updates"
+          }
+      ]
+    },
+    {
+      "id":10,
+      "linktext":"Blog Post",
+      "child":true,
+      "icon":"collections_bookmark",
+      "submenu":[
+          {
+              "id":101,
+              "linktext":"Blog Post",
+              "link":"/dashboard/blog-post"
+          }
+      ]
+    }
+]
+
+

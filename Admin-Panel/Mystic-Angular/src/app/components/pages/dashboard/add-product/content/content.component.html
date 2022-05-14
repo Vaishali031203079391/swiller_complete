@@ -1,0 +1,571 @@
+<div class="ms-content-wrapper cardspage">
+    <div class="ms-profile-overview profilepage">
+        <div class="ms-profile-cover">
+            <img class="ms-profile-img" src="assets/img/people/people-12.jpg" alt="people">
+            <div class="ms-profile-user-info">
+                <h1 class="ms-profile-username">Weekend Sale Offer</h1>
+                <h2 class="ms-profile-role">Events Offer</h2>
+            </div>
+            <div class="ms-profile-user-buttons">
+                <a routerLink="/" class="btn btn-primary mr-2"> <i class="material-icons">person_add</i>  Edit</a>
+                <a routerLink="/" class="btn btn-light"> <i class="material-icons">file_download</i>  Delete</a>
+            </div>
+        </div>
+        <ul ngbNav #nav="ngbNav" class="ms-profile-navigation nav nav-tabs tabs-bordered">
+            <li [ngbNavItem]="1">
+                <a ngbNavLink> Overview </a>
+                <ng-template ngbNavContent>
+                    <div class="row">
+                        <div class="col-xl-7 col-md-12">
+                            <div class="ms-panel ms-panel-fh">
+                                <div class="ms-panel-body">
+                                    <h2 class="section-title">About Offer</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non elit nisl.
+                                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                                        himenaeos.
+                                        Aenean luctus, justo id pellentesque imperdiet, augue metus ornare quam, in
+                                        pulvinar massa erat nec dui. Nam at facilisis nulla.
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non elit nisl.
+                                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                                        himenaeos.
+                                        Aenean luctus, justo id pellentesque imperdiet, augue metus ornare quam, in
+                                        pulvinar massa erat nec dui. Nam at facilisis nulla.
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non elit nisl.
+                                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                                        himenaeos.
+                                        Aenean luctus, justo id pellentesque imperdiet, augue metus ornare quam, in
+                                        pulvinar massa erat nec dui. Nam at facilisis nulla.
+                                    </p>
+                                    <div class="ms-profile-skills">
+                                        <h2 class="section-title">Tags</h2>
+                                        <ul class="ms-skill-list">
+                                            <li class="ms-skill" *ngFor="let item of skills">{{item.title}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-md-12">
+                            <div class="ms-panel ms-panel-fh">
+                                <div class="ms-panel-body">
+                                    <ul class="ms-profile-stats">
+                                        <li>
+                                            <h3 class="ms-count">5790</h3>
+                                            <span>Bookings</span>
+                                        </li>
+                                        <li>
+                                            <h3 class="ms-count">4.8</h3>
+                                            <span>Customer Rating</span>
+                                        </li>
+                                    </ul>
+                                    <h2 class="section-title">Basic Information</h2>
+                                    <table class="table ms-profile-information">
+                                        <tbody>
+                                            <tr *ngFor="let item of information">
+                                                <th scope="row">{{item.title}}</th>
+                                                <td>{{item.text}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="ms-panel">
+                                <div class="ms-panel-body">
+                                    <h2 class="section-title">Other Offers</h2>
+                                    <div class="row">
+                                        <div class="col-xl-4 col-md-6 col-sm-12" *ngFor="let item of workexp">
+                                            <div class="media ms-profile-experience">
+                                                <div class="mr-2 align-self-center">
+                                                    <img src="{{item.logo}}" class="ms-img-round ms-img-small"
+                                                        alt="{{item.name}}">
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4>{{item.name}}</h4>
+                                                    <p>{{item.time}}</p>
+                                                    <p>{{item.designation}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="ms-panel">
+                                <div class="ms-panel-body pb-0">
+                                    <h2 class="section-title">Your Latest Posts</h2>
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let item of projects">
+                                            <div class="ms-card">
+                                                <div class="ms-card-body">
+                                                    <div class="media fs-14">
+                                                        <div class="mr-2 align-self-center">
+                                                            <img src="{{item.userimg}}" class="ms-img-round"
+                                                                alt="{{item.username}}">
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h6>{{item.username}} </h6>
+                                                            <div class="dropdown float-right" ngbDropdown>
+                                                                <a href="javascript:void(0)" class="toggle-icon-none" ngbDropdownToggle>
+                                                                    <i class="material-icons">more_vert</i>
+                                                                </a>
+                                                                <ul ngbDropdownMenu
+                                                                    class="dropdown-menu dropdown-menu-right">
+                                                                    <li class="ms-dropdown-list">
+                                                                        <a class="media p-2" routerLink="/">
+                                                                            <div class="media-body">
+                                                                                <span>Comment</span>
+                                                                            </div>
+                                                                        </a>
+                                                                        <a class="media p-2" routerLink="/">
+                                                                            <div class="media-body">
+                                                                                <span>Share</span>
+                                                                            </div>
+                                                                        </a>
+                                                                        <a class="media p-2" routerLink="/">
+                                                                            <div class="media-body">
+                                                                                <span>Favorite</span>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <p class="fs-12 my-1 text-disabled">{{item.time}}</p>
+                                                        </div>
+                                                    </div>
+                                                    <h6>{{item.title}}</h6>
+                                                    <p>{{item.text}}</p>
+                                                </div>
+                                                <div class="ms-card-img">
+                                                    <img src="{{item.postimg}}" alt="{{item.title}}">
+                                                </div>
+                                                <div class="ms-card-footer text-disabled d-flex">
+                                                    <div class="ms-card-options">
+                                                        <i class="material-icons">favorite</i> {{item.likes}}
+                                                    </div>
+                                                    <div class="ms-card-options">
+                                                        <i class="material-icons">comment</i> {{item.comments}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </li>
+            <li [ngbNavItem]="2">
+                <a ngbNavLink>Statics </a>
+                <ng-template ngbNavContent>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="ms-panel">
+                                <div class="ms-panel-header">
+                                    <h6>Bookings Overview</h6>
+                                </div>
+                                <div class="ms-panel-body">
+                                    <!-- <p class="ms-directions">Use <code>.bg-{{'{state}'}}</code> in
+                                        <code>.progress-circle</code></p> -->
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="progress-rounded">
+                                                <div class="progress-value">Total Bookings 12375</div>
+                                                <svg>
+                                                    <circle class="progress-cicle bg-success" cx="65" cy="65" r="57"
+                                                        stroke-width="16" fill="none" aria-valuenow="12"
+                                                        aria-orientation="vertical" aria-valuemin="0"
+                                                        aria-valuemax="100" role="slider"
+                                                        [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 12">
+                                                    </circle>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="progress-rounded">
+                                                <div class="progress-value">New Bookings 5632</div>
+                                                <svg>
+                                                    <circle class="progress-cicle bg-info" cx="65" cy="65" r="57"
+                                                        stroke-width="16" fill="none" aria-valuenow="38.8"
+                                                        aria-orientation="vertical" aria-valuemin="0"
+                                                        aria-valuemax="100" role="slider"
+                                                        [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 38.8">
+                                                    </circle>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="progress-rounded">
+                                                <div class="progress-value">Repeated Bookings 5743</div>
+                                                <svg>
+                                                    <circle class="progress-cicle bg-warning" cx="65" cy="65" r="57"
+                                                        stroke-width="16" fill="none" aria-valuenow="78.8"
+                                                        aria-orientation="vertical" aria-valuemin="0"
+                                                        aria-valuemax="100" role="slider"
+                                                        [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 78.8">
+                                                    </circle>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="progress-rounded">
+                                                <div class="progress-value">Cancelled Bookings 1000</div>
+                                                <svg>
+                                                    <circle class="progress-cicle bg-danger" cx="65" cy="65" r="57"
+                                                        stroke-width="16" fill="none" aria-valuenow="100"
+                                                        aria-orientation="vertical" aria-valuemin="0"
+                                                        aria-valuemax="100" role="slider"
+                                                        [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 100">
+                                                    </circle>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="ms-panel ms-panel-fh">
+                                <div class="ms-panel-header">
+                                  <div class="row">
+                                    <div class="col-xl-6 md-6">
+                                      <h6>Weekly Progress</h6>
+                                    </div>
+                                    <div class="col-xl-6 md-6">
+                                    <div class="input-group">
+                                        <select class="form-control">
+                                            <option value="">January</option>
+                                            <option value="">February</option>
+                                            <option value="">March</option>
+                                            <option value="">April</option>
+                                            <option value="">May</option>
+                                            <option value="">June</option>
+                                            <option value="">July</option>
+                                            <option value="">August</option>
+                                            <option value="">September</option>
+                                            <option value="">October</option>
+                                            <option value="">November</option>
+                                            <option value="">December</option>
+                                        </select>
+                                    </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="ms-panel-body">
+                                    <!-- <p class="ms-directions">Use <code>.progress-tiny</code> in <code>.progress</code></p> -->
+                                    <span class="progress-label">Week 1</span><span class="progress-status">25%</span>
+                                    <div class="progress progress-tiny">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span class="progress-label">Week 2</span><span class="progress-status">50%</span>
+                                    <div class="progress progress-tiny">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span class="progress-label">Week 3</span><span class="progress-status">75%</span>
+                                    <div class="progress progress-tiny">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span class="progress-label">Week 4</span><span class="progress-status">100%</span>
+                                    <div class="progress progress-tiny">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span class="progress-label">Week 5</span><span class="progress-status">100%</span>
+                                    <div class="progress progress-tiny">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-md-6">
+
+                        </div>
+                        <div class="col-md-6">
+
+                        </div> -->
+
+        <!---------------------SECTION 4----------------------------------------------->
+        <div class="col-xl-7 col-md-12">
+          <div class="ms-panel ms-panel-fh">
+            <div class="ms-panel-header header-mini">
+                <div class="d-flex justify-content-between">
+                    <h6>Table Booking Time Chart</h6>
+                    <div class="btn-group btn-group-toggle ms-graph-metrics" ngbRadioGroup name="radioBasic"
+                        [(ngModel)]="model">
+                        <label ngbButtonLabel class="btn btn-sm btn-outline-primary day">
+                            <input ngbButton type="radio" [value]="1" (click)="day()"> Day
+                        </label>
+                        <label ngbButtonLabel class="btn btn-sm btn-outline-primary month">
+                            <input ngbButton type="radio" value="middle" (click)="month()"> Month
+                        </label>
+                        <label ngbButtonLabel class="btn btn-sm btn-outline-primary year">
+                            <input ngbButton type="radio" [value]="false" (click)="year()"> Year
+                        </label>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between ms-graph-meta">
+                    <ul class="ms-list-flex">
+                        <li>
+                            <span>Total Bookings</span>
+                            <h3 class="ms-count">85,390</h3>
+                        </li>
+                        <li>
+                            <span>New Bookings</span>
+                            <h3 class="ms-count">19,038</h3>
+                        </li>
+                        <li>
+                            <span>Repeat Bookings</span>
+                            <h3 class="ms-count">3,785</h3>
+                        </li>
+                        <li>
+                          <span>Canceled Bookings</span>
+                          <h3 class="ms-count">3,785</h3>
+                      </li>
+                    </ul>
+                    <div class="ms-graph-labels">
+                        <span class="ms-graph-regular"></span>
+                        <p>Gained</p>
+                        <span class="ms-graph-decrease"></span>
+                        <p>Lost</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ms-panel-body">
+                <canvas baseChart [datasets]="ytsusChartData" [labels]="ytsusChartLabels"
+                    [options]="ytsusChartOptions" [chartType]="barChartType">
+                </canvas>
+            </div>
+        </div>
+        </div>
+        <div class="col-xl-5 col-md-12">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Most Preferred Days</h6>
+                </div>
+                <div class="ms-panel-body">
+                  <ul class="nav nav-tabs nav-justified has-gap" ngbNav #tablenav="ngbNav">
+                    <li [ngbNavItem]="1" class="fs-12">
+                        <a ngbNavLink> Mon </a>
+                        <ng-template ngbNavContent>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Booking Id</th>
+                                            <th scope="col">Table</th>
+                                            <th scope="col">Time</th>
+                                            <th scope="col">Offer</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of marketPosTable">
+                                            <td>{{item.country}}</td>
+                                            <td>{{item.value | number:'1.2-2'}}</td>
+                                            <td class="ms-text-success" *ngIf="item.status">+{{item.position |
+                                                number:'1.2-2'}}%</td>
+                                            <td class="ms-text-danger" *ngIf="!item.status">-{{item.position |
+                                                number:'1.2-2'}}%</td>
+                                            <td>{{item.volume | number:'1.2-2'}}%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="2" class="fs-12">
+                        <a ngbNavLink> TUE </a>
+                        <ng-template ngbNavContent>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                          <th scope="col">Booking Id</th>
+                                          <th scope="col">Table</th>
+                                          <th scope="col">Time</th>
+                                          <th scope="col">Offer</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of marketPosTable">
+                                            <td>{{item.country}}</td>
+                                            <td>{{item.value | number:'1.2-2'}}</td>
+                                            <td class="ms-text-success" *ngIf="item.status">+{{item.position |
+                                                number:'1.2-2'}}%</td>
+                                            <td class="ms-text-danger" *ngIf="!item.status">-{{item.position |
+                                                number:'1.2-2'}}%</td>
+                                            <td>{{item.volume | number:'1.2-2'}}%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="3" class="fs-12">
+                        <a ngbNavLink> WED </a>
+                        <ng-template ngbNavContent>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                          <th scope="col">Booking Id</th>
+                                          <th scope="col">Table</th>
+                                          <th scope="col">Time</th>
+                                          <th scope="col">Offer</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of marketPosTable">
+                                            <td>{{item.country}}</td>
+                                            <td>{{item.value | number:'1.2-2'}}</td>
+                                            <td class="ms-text-success" *ngIf="item.status">+{{item.position |
+                                                number:'1.2-2'}}%</td>
+                                            <td class="ms-text-danger" *ngIf="!item.status">-{{item.position |
+                                                number:'1.2-2'}}%</td>
+                                            <td>{{item.volume | number:'1.2-2'}}%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="4" class="fs-12">
+                        <a ngbNavLink> THU </a>
+                        <ng-template ngbNavContent>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                          <th scope="col">Booking Id</th>
+                                          <th scope="col">Table</th>
+                                          <th scope="col">Time</th>
+                                          <th scope="col">Offer</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of marketPosTable">
+                                            <td>{{item.country}}</td>
+                                            <td>{{item.value | number:'1.2-2'}}</td>
+                                            <td class="ms-text-success" *ngIf="item.status">+{{item.position |
+                                                number:'1.2-2'}}%</td>
+                                            <td class="ms-text-danger" *ngIf="!item.status">-{{item.position |
+                                                number:'1.2-2'}}%</td>
+                                            <td>{{item.volume | number:'1.2-2'}}%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="5" class="fs-12">
+                        <a ngbNavLink> FRI </a>
+                        <ng-template ngbNavContent>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                          <th scope="col">Booking Id</th>
+                                          <th scope="col">Table</th>
+                                          <th scope="col">Time</th>
+                                          <th scope="col">Offer</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of marketPosTable">
+                                            <td>{{item.country}}</td>
+                                            <td>{{item.value | number:'1.2-2'}}</td>
+                                            <td class="ms-text-success" *ngIf="item.status">+{{item.position |
+                                                number:'1.2-2'}}%</td>
+                                            <td class="ms-text-danger" *ngIf="!item.status">-{{item.position |
+                                                number:'1.2-2'}}%</td>
+                                            <td>{{item.volume | number:'1.2-2'}}%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </ng-template>
+                    </li>
+                </ul>
+                <div [ngbNavOutlet]="tablenav"></div>
+                </div>
+            </div>
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Top Offers</h6>
+                    <p>Your highest selling Offerss</p>
+                </div>
+                <div class="ms-panel-body p-0">
+                    <div class="ms-quick-stats">
+                        <div class="ms-stats-grid">
+                            <p class="ms-text-success">+47.18%</p>
+                            <p class="ms-text-dark">8,033</p>
+                            <span>Swiller Dashboard</span>
+                        </div>
+                        <div class="ms-stats-grid">
+                            <p class="ms-text-success">+17.24%</p>
+                            <p class="ms-text-dark">6,039</p>
+                            <span>Your Offers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!------------------------END OF SECTION 4---------------------------->
+
+        <!-----------------------SECTION 5--------------------------------------->
+
+        <div class="col-lg-12">
+          <div class="ms-panel">
+            <div class="ms-panel-header">
+                <h6>Recent Bookings</h6>
+            </div>
+            <div class="ms-panel-body">
+                <div class="row mb-3">
+                    <div class="col-lg-3 col-md-6">
+                        <input #search class="search" class="form-control" type="text" placeholder="Search..." (keydown.enter)="onSearch(search.value)">
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <ng2-smart-table [settings]="settings" [source]="source" class="table w-100 thead-primary"></ng2-smart-table>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!--------------------END OF SECTION 5------------------------------------>
+                    </div>
+                </ng-template>
+            </li>
+            <li [ngbNavItem]="3">
+                <a ngbNavLink>Gallery </a>
+                <ng-template ngbNavContent>
+                  <div class="row">
+                    <div class="ms-panel">
+                      <div class="ms-panel-header">
+                          <h6>Minimal Portfolio</h6>
+                      </div>
+                      <div class="ms-panel-body pb-0">
+                          <div class="ms-portfolio ms-portfolio-minimal card-columns">
+                              <a class="card ms-portfolio-item" routerLink="/" *ngFor="let item of minimalportfolio">
+                                  <img src="{{item.photo}}" alt="{{item.name}}">
+                                  <div class="ms-portfolio-item-content">
+                                      <h4>{{item.name}}</h4>
+                                      <p>{{item.desc}}</p>
+                                  </div>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  </div>
+                </ng-template>
+            </li>
+        </ul>
+    </div>
+    <div [ngbNavOutlet]="nav"></div>
+
+</div>

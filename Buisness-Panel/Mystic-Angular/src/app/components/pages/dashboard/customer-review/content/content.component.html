@@ -1,0 +1,167 @@
+<!-- Body Content Wrapper -->
+<div class="ms-content-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ms-panel ms-panel-fh">
+        <div class="ms-panel-header">
+          <div class="row">
+            <div class="col-xl-8 md-8">
+              <h6>Reviews and Ratings</h6>
+            </div>
+          </div>
+        </div>
+        <div class="ms-panel-body clearfix">
+           <!--  <p class="ms-directions">Use <code>.tab-pills</code> with <code>.has-gap</code> in
+                <code>.nav-tabs</code>
+            </p> -->
+            <ul ngbNav #navfive="ngbNav" class="nav nav-tabs d-flex tab-pills has-gap nav-justified mb-4">
+                <li [ngbNavItem]="1">
+                    <a ngbNavLink>Reviews</a>
+                    <ng-template ngbNavContent>
+                      <!-- Body Content Wrapper -->
+                        <div class="ms-content-wrapper">
+                        <div class="row">
+                          <!-- Recent Support Tickets -->
+                          <div class="col-xl-12 col-md-12">
+                              <div class="ms-panel ms-panel-fh">
+                                  <div class="ms-panel-header">
+                                      <div class="d-flex justify-content-between">
+                                          <div>
+                                              <h6>Recent Customer Reviews</h6>
+                                              <p>Some of the recent customer reviews</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="ms-panel-body p-0">
+                                      <ul class="ms-list ms-feed ms-twitter-feed ms-recent-support-tickets">
+                                          <li class="ms-list-item" *ngFor="let item of paginateData">
+                                              <a routerLink="/" class="media clearfix">
+                                                  <img src="{{item.userimg}}" class="ms-img-round ms-img-small" alt="{{item.username}}">
+                                                  <div class="media-body">
+                                                      <span class="my-2 d-block"> <i class="material-icons">date_range</i>
+                                                          {{item.date}}</span>
+                                                      <p class="d-block"> {{item.query}}</p>
+                                                      <div class="d-flex justify-content-between align-items-end">
+                                                          <div class="ms-feed-controls">
+                                                              <span>
+                                                                  <i class="material-icons">chat</i> {{item.comment}}
+                                                              </span>
+                                                              <span>
+                                                                  <i class="material-icons">attachment</i> {{item.attachment}}
+                                                              </span>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </a>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+            <div class="row">
+            <div class="col-xl-6 col-md-6 col-sm-6">
+                <ngb-pagination [collectionSize]="collectionSize" class="active-round" [(page)]="page" [pageSize]="pageSize" (pageChange)="getPremiumData();"
+                    aria-label="Default pagination">
+                </ngb-pagination>
+            </div>
+            <div class="col-xl-6 col-md-6 col-sm-6">
+                <select class="custom-select" style="width: auto" [(ngModel)]="pageSize" (ngModelChange)="getPremiumData();">
+                  <option [ngValue]="2">2 items per page</option>
+                  <option [ngValue]="4">4 items per page</option>
+                  <option [ngValue]="6">6 items per page</option>
+                </select>
+            </div>
+            </div>
+            </div>
+    </ng-template>
+                </li>
+                <li [ngbNavItem]="2">
+                    <a ngbNavLink>Ratings </a>
+                    <ng-template ngbNavContent>
+                      <div class="row">
+                        <br>
+                        <br>
+                        <div class="col-md-2">
+                            <div class="progress-rounded">
+                                <div class="progress-value">5 stars 120</div>
+                                <svg>
+                                    <circle class="progress-cicle bg-success" cx="65" cy="65" r="57" stroke-width="16" fill="none" aria-valuenow="12" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" role="slider" [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 12">
+                                    </circle>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="progress-rounded">
+                                <div class="progress-value">4 stars 145</div>
+                                <svg>
+                                    <circle class="progress-cicle bg-info" cx="65" cy="65" r="57" stroke-width="16" fill="none" aria-valuenow="38.8" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" role="slider" [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 38.8">
+                                    </circle>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="progress-rounded">
+                                <div class="progress-value">3 stars 98</div>
+                                <svg>
+                                    <circle class="progress-cicle bg-warning" cx="65" cy="65" r="57" stroke-width="16" fill="none" aria-valuenow="78.8" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" role="slider" [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 78.8">
+                                    </circle>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="progress-rounded">
+                                <div class="progress-value">2 stars 56</div>
+                                <svg>
+                                    <circle class="progress-cicle bg-danger" cx="65" cy="65" r="57" stroke-width="16" fill="none" aria-valuenow="100" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" role="slider" [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 100">
+                                    </circle>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="progress-rounded">
+                              <div class="progress-value">1 star 12</div>
+                              <svg>
+                                  <circle class="progress-cicle bg-danger" cx="65" cy="65" r="57" stroke-width="16" fill="none" aria-valuenow="100" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" role="slider" [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 100">
+                                  </circle>
+                              </svg>
+                          </div>
+                      </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="col-md-12">
+                      <div class="ms-panel">
+                        <div class="ms-panel-header">
+                            <h6>Offers wise Ratings</h6>
+                        </div>
+                        <div class="ms-panel-body">
+                            <div class="row mb-3">
+                                <div class="col-lg-3 col-md-6">
+                                    <input #search class="search" class="form-control" type="text" placeholder="Search..." (keydown.enter)="onSearch(search.value)">
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                  <select class="form-control" [ngModel]="sortBy" (ngModelChange)="onChange($event)">
+                                    <option value="Ratings">Ratings</option>
+                                    <option value="Total Bookings">Total Bookings</option>
+                                    <option value="Total Revenue">Total Revenue</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="table-responsive">
+                                <ng2-smart-table [settings]="settings" [source]="source" class="table w-100 thead-primary"></ng2-smart-table>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    </ng-template>
+                </li>
+            </ul>
+            <div [ngbNavOutlet]="navfive"></div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+

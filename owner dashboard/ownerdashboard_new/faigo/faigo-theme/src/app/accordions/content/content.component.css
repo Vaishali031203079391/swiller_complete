@@ -1,0 +1,228 @@
+@import "../../../assets/form_wizard_styling/css/style.css";
+@import '~perfect-scrollbar/css/perfect-scrollbar.css';
+@import '~ngx-toastr/toastr.css';
+
+:focus {
+    outline: none;
+}
+ .carousel-item,
+.carousel-item img,
+.produt-detail .carousel-item .picsum-img-wrapper img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+.produt-detail .carousel-item .picsum-img-wrapper {
+	height: 300px;
+	width: 100%;
+}
+.ms-panel-body .accordion .card:last-child,
+.ms-panel-body .alert:last-child,
+.ms-panel-body>div:last-child .progress,
+.ms-website-performance li.ms-list-item {
+	margin-bottom: 0;
+}
+.cardspage .section-title {
+	font-size: 18px;
+}
+.ms-crop-preview img {
+	width: 100%!important;
+}
+.produt-detail .carousel-item {
+	height: 300px;
+}
+.produt-detail .carousel-item>img {
+	height: 100%;
+	object-fit: cover;
+}
+.nav-accordion .card {
+	display: block;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+	background-color: transparent;
+}
+.nav-accordion .card .card-header {
+	flex: auto;
+	padding: 0;
+	background-color: transparent;
+}
+.nav-accordion .card ul>li>a,
+.nav-accordion .card .card-header .btn {
+	position: relative;
+	display: block;
+	padding: 15px 0 15px 25px;
+	color: #ffffff;
+	transition: 0s;
+	margin-top: 0;
+	min-width: 100%;
+	text-align: left;
+	background: transparent;
+}
+.nav-accordion .card .card-header .btn:hover,
+.nav-accordion .card .card-header .btn:focus {
+    text-decoration: none;
+    box-shadow: none;
+}
+.nav-accordion.accordion .card .card-header .btn:after {
+	content: '\e313';
+	font-family: 'Material Icons';
+	font-weight: 700;
+	font-style: normal;
+	position: absolute;
+	top: 16px;
+	right: 20px;
+	transition: 0.3s;
+}
+.nav-accordion .card .card-header .btn span {
+	display: flex;
+	align-items: center;
+	max-width: 100%;
+	color: #fff;
+	font-weight: 400;
+}
+.nav-accordion .card .card-header .btn span i {
+	margin-right: 20px;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+.nav-accordion .card .card-header .btn span i:before {
+	font-size: 16px;
+}
+.nav-accordion .card-header::after {
+	display: none;
+}
+.side-nav .card .card-body {
+	padding: 0;
+}
+.side-nav .card ul {
+	padding-left: 40px;
+	margin-bottom: 0;
+	background-color: #594113;
+}
+ng2-smart-table.table.thead-primary .ng2-smart-th a {
+	color: #fff;
+}
+ng2-smart-table.table .ng2-smart-th a {
+	color: #212529;
+}
+.ng2-smart-pagination-nav {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 20px;
+}
+.ng2-smart-pagination {
+	margin-bottom: 0;
+}
+.ng2-smart-pagination.pagination .page-link {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.table td.ng2-smart-actions {
+	white-space: nowrap;
+}
+.produt-detail .carousel-item {
+	height: 300px;
+}
+.produt-detail .carousel-item>img {
+	height: 100%;
+	object-fit: cover;
+}
+.ms-panel-header h6,
+.ms-instagram-feed .ms-feed-user,
+.ms-facebook-feed .ms-feed-user,
+.ms-device-sessions .ms-device h4 {
+	font-size: 16px;
+}
+.ms-website-performance li.ms-list-item h4,
+.ms-facebook-engagements .ms-graph-meta h2 {
+	font-size: 18px;
+}
+.produt-detail {
+	margin-bottom: 4rem;
+}
+.ms-list.ms-sortable-list h5,
+.ms-list.ms-sortable h5 {
+	font-size: 17px;
+}
+.modal-body h1,
+.ms-auth-form h1,
+.ms-profile-user-info h1 {
+	font-size: 28px;
+}
+.accordion.faq .card-header i {
+	top: 4px;
+}
+.progress-rounded.progress-round-tiny {
+	margin-bottom: 0;
+	text-align: center;
+}
+.ms-card-body h6 + p {
+	margin-bottom: 0;
+}
+.breadcrumb li {
+	margin-bottom: .75rem;
+}
+.breadcrumb {
+	padding-bottom: 0;
+}
+.ms-profile-skills .section-title {
+	margin-top: 0;
+}
+.profilepage .section-title {
+	font-size: 20px;
+}
+.table td,
+.table th {
+	white-space: nowrap;
+}
+.ms-quick-bar:not(.ms-quick-bar-open) .nav-tabs.ms-quick-bar-list .nav-item .nav-link,
+.ms-quick-bar:not(.ms-quick-bar-open) .nav-tabs.ms-quick-bar-list .nav-item .nav-link i,
+.ms-quick-bar:not(.ms-quick-bar-open) .nav-tabs.ms-quick-bar-list .nav-item .nav-link span{
+	background-color: #fff;
+	color: #34334a;
+}
+@media(max-width: 575px) {
+	.ms-todo-options, .ms-todo-options.ms-todo-nav {
+		justify-content: center;
+	}
+}
+@media(max-width: 500px) {
+	.ms-email-pagination {
+		position: relative;
+		left: -10px;
+		right: 0;
+		top: 6px;
+	}
+}
+@media(max-width: 540px) {
+	.btn-group {
+		width: 100%;
+	}
+}
+@media(max-width: 767px) {
+	.progress-rounded.progress-round-tiny {
+		margin-bottom: 20px;
+	}
+	.bg-white .row>div:last-child .progress-rounded.progress-round-tiny {
+		margin-bottom: 0;
+	}
+}
+@media(max-width: 767px) {
+	.ms-graph-labels.column-direction {
+		display: none;
+	}
+	.ms-cropper-controls {
+		flex-wrap: wrap;
+	}
+	.ms-wizard-vertical.ms-form-wizard .tab-content,
+	.ms-wizard-vertical.ms-form-wizard .actions {
+		margin-left: 0;
+	}
+}

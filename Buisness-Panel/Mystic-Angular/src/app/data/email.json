@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "img": "assets/img/people/people-11.jpg",
+        "name": "James Zathila",
+        "mailtitle": "[WordPress] New Comment",
+        "mailtime": "2 Hours ago",
+        "mailcomment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc"
+    },
+    {
+        "id":2,
+        "img": "assets/img/people/people-10.jpg",
+        "name": "John Doe",
+        "mailtitle": "[WordPress] New Comment",
+        "mailtime": "8 Hours ago",
+        "mailcomment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc"
+    },
+    {
+        "id":3,
+        "img": "assets/img/people/people-7.jpg",
+        "name": "Heather Brown",
+        "mailtitle": "[WordPress] New Comment",
+        "mailtime": "1 Day ago",
+        "mailcomment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc"
+    }
+]

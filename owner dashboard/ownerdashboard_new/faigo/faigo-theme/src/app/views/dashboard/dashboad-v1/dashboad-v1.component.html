@@ -1,0 +1,168 @@
+<div class="">
+	<div class="breadcrumb">
+		<div>
+			<h1>Sales</h1>
+			<p> Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-12 col-md-6 col-lg-6 col-xl-3">
+			<div class="card card-icon mb-4">
+				<div class="card-body p-4 pb-0">
+					<h5 class="card-title">Gross Revenue</h5>
+					<div class="">
+						<div>
+							<h2 class="font-weight-normal">72.18%</h2>
+						</div>
+						<div>
+							<div class="mb-3">
+								<ngb-progressbar type="primary" [value]="72.18" height="4px"></ngb-progressbar>
+							</div>
+							<h6 class="font-weight-normal">Total Profit</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-12 col-md-6 col-lg-6 col-xl-3">
+			<div class="card card-icon mb-4">
+				<div class="card-body p-4 pb-0">
+					<h5 class="card-title">Specials</h5>
+					<div class="">
+						<div>
+							<h2 class="font-weight-normal">53.18%</h2>
+						</div>
+						<div>
+							<div class="mb-3">
+								<ngb-progressbar type="danger" [value]="53" height="4px"></ngb-progressbar>
+							</div>
+							<h6 class="font-weight-normal">Per Month</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-12 col-md-6 col-lg-6 col-xl-3">
+			<div class="card card-icon mb-4">
+				<div class="card-body p-4 pb-0">
+					<h5 class="card-title">Events</h5>
+					<div class="">
+						<div>
+							<h2 class="font-weight-normal">23.78%</h2>
+						</div>
+						<div>
+							<div class="mb-3">
+								<ngb-progressbar type="success" [value]="23.78" height="4px"></ngb-progressbar>
+							</div>
+							<h6 class="font-weight-normal">Per Month</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-12 col-md-6 col-lg-6 col-xl-3">
+			<div class="card card-icon mb-4">
+				<div class="card-body p-4 pb-0">
+					<h5 class="card-title">Openings</h5>
+					<div class="">
+						<div>
+							<h2 class="font-weight-normal">21.12%</h2>
+						</div>
+						<div>
+							<div class="mb-3">
+								<ngb-progressbar type="warning" [value]="21.12" height="4px"></ngb-progressbar>
+							</div>
+							<h6 class="font-weight-normal">Per Week</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12 col-md-12 col-lg-6 col-xl-3">
+			<div class="card mb-4">
+				<div class="card-body">
+					<h5 class="card-title">Gross Revenue</h5>
+					<div class="p-4 bg-primary text-center mb-4 rounded">
+						<h5 class="font-weight-normal text-white">Revenue <span class="font-xs">(This Year)</span> </h5>
+						<h4 class="mb-0 text-white">$566</h4>
+					</div>
+					<div class="p-4 text-center align-items-center rounded mb-4 box-shadow border">
+						<div class="d-flex justify-content-between mb-4">
+							<h5 class="font-weight-normal mb-0">Target</h5>
+							<h5 class="mb-0 font-weight-normal">46%</h5>
+						</div>
+						<div>
+							<div class="mb-0">
+
+								<ngb-progressbar type="success" [value]="60" height="4px"></ngb-progressbar>
+							</div>
+						</div>
+					</div>
+					<div class="mb-4">
+						<div class="d-flex justify-content-between mb-2">
+							<p class="mb-0">
+								Specials
+							</p>
+							<p class="mb-0">
+								23%
+							</p>
+						</div>
+						<ngb-progressbar type="success" [value]="60" height="4px"></ngb-progressbar>
+					</div>
+
+					<div class="mb-4">
+						<div class="d-flex justify-content-between mb-2">
+							<p class="mb-0">
+								Events
+							</p>
+							<p class="mb-0">
+								56%
+							</p>
+						</div>
+						<ngb-progressbar type="success" [value]="60" height="4px"></ngb-progressbar>
+					</div>
+
+					<div class="mb-4">
+						<div class="d-flex justify-content-between mb-2">
+							<p class="mb-0">
+								Openings
+							</p>
+							<p class="mb-0">
+								21%
+							</p>
+						</div>
+						<ngb-progressbar type="success" [value]="60" height="4px"></ngb-progressbar>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="col-12 col-md-12 col-lg-6 col-xl-9">
+			<div class="card mb-4">
+				<div class="card-body">
+					<h5 class="card-title">This Year Sales</h5>
+					<div echarts [options]="salesChartBar" [autoResize]="true" style="height: 430px;" id="chart1"></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12 col-md-12">
+		  <div class="card mb-4">
+			<div class="card-body p-0">
+			  <h5 class="card-title m-0 p-3">Sales</h5>
+			  <div echarts [options]="saleOptions" style="height: 300px" id="chart2"></div>
+			</div>
+		  </div>
+		</div>
+	  
+	  </div>
+
+	

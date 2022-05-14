@@ -1,0 +1,69 @@
+<div class="ms-content-wrapper">
+  <div class="row">
+      <div class="col-md-12">
+          <div class="ms-panel">
+              <div class="ms-panel-header">
+                  <h6>Offers Bookings</h6>
+              </div>
+              <div class="ms-panel-body">
+                  <!-- <p class="ms-directions">Use <code>.bg-{{'{state}'}}</code> in <code>.progress-circle</code></p> -->
+                  <div class="row">
+                      <div class="col-md-3">
+                          <div class="progress-rounded">
+                              <div class="progress-value">All Offers INR 12000</div>
+                              <svg>
+                                  <circle class="progress-cicle bg-success" cx="65" cy="65" r="57" stroke-width="16" fill="none" aria-valuenow="12" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" role="slider" [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 12">
+                                  </circle>
+                              </svg>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="progress-rounded">
+                              <div class="progress-value">Openings INR 3880</div>
+                              <svg>
+                                  <circle class="progress-cicle bg-info" cx="65" cy="65" r="57" stroke-width="16" fill="none" aria-valuenow="38.8" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" role="slider" [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 38.8">
+                                  </circle>
+                              </svg>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="progress-rounded">
+                              <div class="progress-value">Specials INR 4310</div>
+                              <svg>
+                                  <circle class="progress-cicle bg-warning" cx="65" cy="65" r="57" stroke-width="16" fill="none" aria-valuenow="78.8" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" role="slider" [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 78.8">
+                                  </circle>
+                              </svg>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="progress-rounded">
+                              <div class="progress-value"> Events INR 3810</div>
+                              <svg>
+                                  <circle class="progress-cicle bg-danger" cx="65" cy="65" r="57" stroke-width="16" fill="none" aria-valuenow="100" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" role="slider" [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 100">
+                                  </circle>
+                              </svg>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-12">
+        <div class="ms-panel">
+          <div class="ms-panel-header">
+              <h6>Bookings</h6>
+          </div>
+          <div class="ms-panel-body">
+              <div class="row mb-3">
+                  <div class="col-lg-3 col-md-6">
+                      <input #search class="search" class="form-control" type="text" placeholder="Search..." (keydown.enter)="onSearch(search.value)">
+                  </div>
+              </div>
+              <div class="table-responsive">
+                  <ng2-smart-table [settings]="settings" [source]="source" class="table w-100 thead-primary"></ng2-smart-table>
+              </div>
+          </div>
+      </div>
+      </div>
+  </div>
+</div>

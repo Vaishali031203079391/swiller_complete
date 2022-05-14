@@ -1,0 +1,120 @@
+[
+    {
+      "id":1,
+      "linktext":"User Profile",
+      "child":true,
+      "icon":"person",
+      "submenu":[
+          {
+              "id":11,
+              "linktext":"Profile",
+              "link":"/dashboard/profile"
+          }
+      ]
+    },
+    {
+      "id":2,
+      "linktext":"Dashboard",
+      "child":true,
+      "icon":"dashboard",
+      "submenu":[
+          {
+              "id":21,
+              "linktext":"Analysis",
+              "link":"/dashboard/project-management"
+          }
+      ]
+    },
+    {
+      "id":3,
+      "linktext":"Offers",
+      "child":true,
+      "icon":"card_giftcard",
+      "submenu":[
+          {
+            "id":31,
+            "linktext":"Post Offer",
+            "link":"/dashboard/add-offer"
+          },
+          {
+            "id":32,
+            "linktext":"Offer Detail",
+            "link":"/dashboard/offer-detail"
+          },
+          {
+              "id":33,
+              "linktext":"Offers Catalogue",
+              "link":"/dashboard/web-analytics"
+          },
+          {
+            "id":34,
+            "linktext": "Offers History",
+            "link": "/dashboard/calendar"
+          }
+      ]
+    },
+    {
+      "id":4,
+      "linktext":"Bookings",
+      "child":true,
+      "icon":"card_membership",
+      "submenu":[
+        {
+            "id":41,
+            "linktext":"Bookings List",
+            "link": "/dashboard/orders"
+        }
+      ]
+    },
+    {
+      "id":5,
+      "linktext":"Invoice",
+      "child":true,
+      "icon":"receipt",
+      "submenu":[
+          {
+              "id":51,
+              "linktext":"Invoice Detail",
+              "link":"/dashboard/invoice"
+          },
+          {
+            "id":52,
+            "linktext":"Invoice List",
+            "link":"/dashboard/invoice-list"
+          }
+      ]
+    },
+    {
+      "id":6,
+      "linktext":"Food Feed",
+      "child":true,
+      "icon":"fastfood",
+      "submenu":[
+          {
+              "id":61,
+              "linktext":"Post a feed",
+              "link":"/dashboard/food-feed"
+          }
+      ]
+    },
+    {
+      "id":7,
+      "linktext":"Customers",
+      "child":true,
+      "icon":"people",
+      "submenu":[
+          {
+              "id":71,
+              "linktext":"Customers Review",
+              "link":"/dashboard/customers-review"
+          },
+          {
+            "id":72,
+            "linktext":"Customers List",
+            "link":"/dashboard/customers-list"
+          }
+      ]
+    }
+]
+
+

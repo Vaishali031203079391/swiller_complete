@@ -1,0 +1,84 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title mb-3">Edit Profile</h5>
+                <form [formGroup]="profileForm" (ngSubmit)="onUpdate()">
+                    <div formGroupName="company">
+                        <h3>Comapny</h3>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputName">Name</label>
+                                <input type="text" class="form-control" id="inputName" name="inputName" placeholder="ABC Inn" formControlName="inputName">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputSpeciality">Speciality</label>
+                                <input type="text" class="form-control" id="inputSpeciality" placeholder="Hotel Rooms Suites.." formControlName="inputSpeciality">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputPriceRange">Price Range</label>
+                                <input type="text" class="form-control" id="inputPriceRange" placeholder="1k - 5k/day" formControlName="inputPriceRange">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputComapany">Company</label>
+                                <input type="text" class="form-control" id="inputCompany" placeholder="Company Name" formControlName="inputCompany">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="inputFounded">Founded</label>
+                                <input type="text" class="form-control" id="inputFounded" placeholder="Year Of Establishment" formControlName="inputFounded">
+                            </div>
+                        </div>
+                    </div>            
+                    <br>
+                   <div formGroupName="contact">
+                        <h3>Contact</h3>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="inputEmail">Email</label>
+                                <input type="email" class="form-control" id="inputEmail" placeholder="Email" formControlName="inputEmail">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputWebsite">Website</label>
+                                <input type="text" class="form-control" id="inputWebsite" placeholder="www.abscdef.com" formControlName="inputWebsite">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputPhone">Phone</label>
+                                <input type="text" class="form-control" id="inputPhone" placeholder="987654321" formControlName="inputPhone">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div formGroupName="address">
+                        <h3>Address</h3>
+
+                        <div class="form-group">
+                            <label for="inputAddress">Address</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" formControlName="inputAddress">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputCity">City</label>
+                                <input type="text" class="form-control" id="inputCity" formControlName="inputCity"> 
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputState">State</label>
+                                <select id="inputState" class="form-control" formControlName="inputState">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="inputZip">Zip</label>
+                                <input type="text" class="form-control" id="inputZip" formControlName="inputZip">
+                            </div>
+                        </div>
+                      </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
